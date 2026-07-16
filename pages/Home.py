@@ -1,17 +1,33 @@
 import streamlit as st
 
-st.title("🏠 Home")
+st.title("❄️ Whiteout Survival Toolkit")
 
-st.write(
-"""
-Welcome to the Whiteout Survival Toolkit.
+st.markdown("## Welcome")
 
-Planned tools:
+left, right = st.columns(2)
 
-- 🐻 Bear Hunt Optimizer
-- 👥 Rally Calculator
-- 🦸 Hero Database
-- ⚔️ Troop Database
-- 📊 Theorycraft
-"""
-)
+with left:
+
+    st.success("Toolkit Status")
+
+    st.write("✅ Project Created")
+
+    st.write("✅ GitHub Connected")
+
+    st.write("✅ Streamlit Online")
+
+with right:
+
+    st.info("Roadmap")
+
+    st.write("🐻 Bear Calculator")
+
+    st.write("👥 Rally Optimizer")
+
+    st.write("🦸 Hero Database")
+
+    st.write("⚔️ Troop Database")
+
+st.divider()
+
+st.caption("Version 0.1")
