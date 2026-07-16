@@ -1,5 +1,10 @@
 import streamlit as st
+from core.loader import load_json
 
-st.title("⚔️ Troops")
+troops = load_json("troops.json")
 
-st.write("Troop database coming soon.")
+st.title("⚔️ Troop Database")
+
+st.metric("Troops Loaded", len(troops["troops"]))
+
+st.info("Database currently empty.")
