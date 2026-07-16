@@ -4,9 +4,11 @@ from core.database import Database
 
 st.title("❄️ Whiteout Survival Toolkit")
 
+
 @st.cache_resource
 def get_database():
     return Database()
+
 
 db = get_database()
 
@@ -14,11 +16,6 @@ hero_count = len(db.heroes)
 troop_count = len(db.troops)
 gear_count = len(db.gear)
 pet_count = len(db.pets)
-
-hero_count = len(heroes.get("heroes", []))
-troop_count = len(troops.get("troops", []))
-gear_count = len(gear.get("gear", []))
-pet_count = len(pets.get("pets", []))
 
 col1, col2 = st.columns(2)
 
