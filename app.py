@@ -1,21 +1,32 @@
 import streamlit as st
 
 st.set_page_config(
-    page_title="Whiteout Survival Toolkit",
+    page_title="WOS Toolkit",
     page_icon="❄️",
     layout="wide",
+    initial_sidebar_state="expanded"
 )
 
 st.title("❄️ Whiteout Survival Toolkit")
 
-st.write(
-    """
-Welcome!
+st.markdown("""
+Welcome to the community toolkit for **Whiteout Survival**.
 
-This project is currently under development.
+### Planned Features
 
-Use the sidebar to navigate through the available tools.
-"""
-)
+- 🐻 Bear Hunt Optimizer
+- 👥 Rally Calculator
+- ⚔️ Troop Optimizer
+- 🦸 Hero Database
+- 📚 Theorycraft
+- 🏰 Buildings
+- 🧪 Research
+- 🐺 Pets
+- 🛡️ Gear
 
-st.info("Version 0.1")
+---
+
+This project is currently under active development.
+""")
+
+st.success("Version 0.1")
