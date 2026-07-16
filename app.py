@@ -12,7 +12,7 @@ st.write(
     """
 Welcome!
 
-This project is currently under development.
+This project is currently under development by monstah.
 
 Use the sidebar to navigate through the available tools.
 """
