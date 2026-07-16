@@ -1,15 +1,19 @@
 import streamlit as st
 
-from core.loader import load_json
+from core.database import Database
 
 st.title("❄️ Whiteout Survival Toolkit")
 
-st.subheader("Project Dashboard")
+@st.cache_resource
+def get_database():
+    return Database()
 
-heroes = load_json("heroes.json")
-troops = load_json("troops.json")
-gear = load_json("gear.json")
-pets = load_json("pets.json")
+db = get_database()
+
+hero_count = len(db.heroes)
+troop_count = len(db.troops)
+gear_count = len(db.gear)
+pet_count = len(db.pets)
 
 hero_count = len(heroes.get("heroes", []))
 troop_count = len(troops.get("troops", []))
