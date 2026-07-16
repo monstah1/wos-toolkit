@@ -1,33 +1,42 @@
 import streamlit as st
 
+from core.loader import load_json
+
 st.title("❄️ Whiteout Survival Toolkit")
 
-st.markdown("## Welcome")
+st.subheader("Project Dashboard")
 
-left, right = st.columns(2)
+heroes = load_json("heroes.json")
+troops = load_json("troops.json")
+gear = load_json("gear.json")
+pets = load_json("pets.json")
 
-with left:
+hero_count = len(heroes.get("heroes", []))
+troop_count = len(troops.get("troops", []))
+gear_count = len(gear.get("gear", []))
+pet_count = len(pets.get("pets", []))
 
-    st.success("Toolkit Status")
+col1, col2 = st.columns(2)
 
-    st.write("✅ Project Created")
+with col1:
+    st.metric("🦸 Heroes Loaded", hero_count)
+    st.metric("⚔️ Troops Loaded", troop_count)
 
-    st.write("✅ GitHub Connected")
-
-    st.write("✅ Streamlit Online")
-
-with right:
-
-    st.info("Roadmap")
-
-    st.write("🐻 Bear Calculator")
-
-    st.write("👥 Rally Optimizer")
-
-    st.write("🦸 Hero Database")
-
-    st.write("⚔️ Troop Database")
+with col2:
+    st.metric("🛡️ Gear Loaded", gear_count)
+    st.metric("🐺 Pets Loaded", pet_count)
 
 st.divider()
 
-st.caption("Version 0.1")
+st.subheader("Roadmap")
+
+st.checkbox("Project Created", value=True, disabled=True)
+st.checkbox("GitHub Connected", value=True, disabled=True)
+st.checkbox("Streamlit Online", value=True, disabled=True)
+st.checkbox("Database Engine", value=True, disabled=True)
+st.checkbox("Hero Database", value=False, disabled=True)
+st.checkbox("Bear Calculator", value=False, disabled=True)
+
+st.divider()
+
+st.caption("Version 0.2")
