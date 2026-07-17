@@ -1,3 +1,76 @@
 {
-    "troops": []
+  "troops": [
+    {
+      "tier": "T11",
+      "type": "Infantry",
+      "power": 148,
+      "attack": 19,
+      "defense": 22,
+      "health": 27,
+      "lethality": 18,
+      "speed": 11,
+      "load": 420,
+      "verified": true
+    },
+    {
+      "tier": "T11",
+      "type": "Lancer",
+      "power": 148,
+      "attack": 28,
+      "defense": 21,
+      "health": 20,
+      "lethality": 26,
+      "speed": 11,
+      "load": 420,
+      "verified": true
+    },
+    {
+      "tier": "T11",
+      "type": "Marksman",
+      "power": 148,
+      "attack": 30,
+      "defense": 21,
+      "health": 20,
+      "lethality": 27,
+      "speed": 11,
+      "load": 420,
+      "verified": true
+    },
+    {
+      "tier": "T12",
+      "type": "Infantry",
+      "power": 178,
+      "attack": 22,
+      "defense": 31,
+      "health": 30,
+      "lethality": 21,
+      "speed": 11,
+      "load": 420,
+      "verified": true
+    },
+    {
+      "tier": "T12",
+      "type": "Lancer",
+      "power": 178,
+      "attack": 31,
+      "defense": 24,
+      "health": 23,
+      "lethality": 29,
+      "speed": 11,
+      "load": 420,
+      "verified": true
+    },
+    {
+      "tier": "T12",
+      "type": "Marksman",
+      "power": 178,
+      "attack": 33,
+      "defense": 24,
+      "health": 23,
+      "lethality": 30,
+      "speed": 11,
+      "load": 420,
+      "verified": true
+    }
+  ]
 }
